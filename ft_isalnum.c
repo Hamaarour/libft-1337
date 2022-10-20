@@ -6,22 +6,23 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 11:43:43 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/12 11:34:40 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/14 16:52:31 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+int	ft_isalnum(int num)
 {
-	if ((c >= 97 && c <= 123) || (c >= 65 && c <= 90)
+	if ((num >= 97 && num <= 122) || (num >= 65 && num <= 90)
 		|| (num >= 48 && num <= 57))
 		return (1);
 	return (0);
 }
-int main ()
+/*int main ()
 {
 	printf("%d",ft_isalnum(90));
 	printf("\n");
 	printf("%d",isalnum(90));
 }
+*/

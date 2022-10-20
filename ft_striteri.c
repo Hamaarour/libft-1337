@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 20:41:32 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/17 17:57:52 by hamaarou         ###   ########.fr       */
+/*   Created: 2022/10/18 10:52:36 by hamaarou          #+#    #+#             */
+/*   Updated: 2022/10/18 10:54:36 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+/*void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t			i;
-	unsigned char	*j;
 
-	j = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		j[i] = 0;
-		i++;
-	}
-	s = j;
 }
-/*int main ()
-{
-    char    s[] = "hicham";
-    char    j[] = "amaarour";
-
-    ft_bzero(j,3);
-    printf("%c",j[3]);
-}*/
+*/

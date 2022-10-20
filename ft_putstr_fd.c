@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 09:47:14 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/15 12:44:43 by hamaarou         ###   ########.fr       */
+/*   Created: 2022/10/15 14:04:20 by hamaarou          #+#    #+#             */
+/*   Updated: 2022/10/17 17:55:45 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t			i;
-	unsigned char	*k;
+	int	i;
 
-	k = (unsigned char *)s;
 	i = 0;
-	while (i < n)
-	{
-		if (k[i] == (unsigned char)c)
-			return (&k[i]);
-		i++;
-	}
-	return (0);
+	if (s == NULL)
+		return ;
+	while (s[i])
+		write(fd, &s[i++], 1);
 }
-/*int main () {
-    const char str[] = "abc";
-    printf("%p\n", &str[2]);
-    const char ch = 0;
-    char *ret;
-
-    ret = ft_memchr(str, ch, 4);
-
-    printf("String after :%c \nresult : |%p|\n", ch, --ret);
-
-    return(0);
-}*/

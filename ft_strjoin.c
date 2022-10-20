@@ -6,37 +6,43 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:31:03 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/12 11:36:00 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/18 09:55:13 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    char    *p;
-    int i = 0;;
-    int full_len;
-    int len = ft_strlen(s1);
+	char	*p;
+	int		i;
+	int		j;
+	int		full_len;
 
-    full_len = ft_strlen(s1) + ft_strlen(s2);
-    p = malloc(full_len + 1);
-    if (!p)
-        return (NULL);
-    while (s2[i])
-    {
-        p[len + i] = s2[i];
-        i++;
-    }
-    //ft_memcpy (p,s2,ft_strlen(s2));
-    p[full_len] = 0;
-
-    return (p);
+	i = 0;
+	j = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	full_len = ft_strlen(s1) + ft_strlen(s2);
+	p = malloc(full_len + 1);
+	if (!p)
+		return (NULL);
+	while (s1[i])
+	{
+		p[j] = s1[i];
+		i++;
+		j++;
+	}
+	i = 0;
+	while (s2[i])
+		p[j++] = s2[i++];
+	p[j] = 0;
+	return (p);
 }
-int main ()
+/*int main ()
 {
     char s[] = "a";
     char j[] = "";
-    
+
     printf("%s",ft_strjoin(s,j));
-}
+}*/

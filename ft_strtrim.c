@@ -6,56 +6,67 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:45:56 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/13 17:10:38 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/19 09:50:03 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdlib.h>
-#include<string.h>
-
+#include <stdlib.h>
+#include <string.h>
 
 /*
     s1 = "++hicham++"
-    s2 = "++" 
+    s2 = "-+"
 */
-int is_set(char c, char *set)
-{
-    size_t i;
 
-    i = 0;
-    while (set[i])
-    {
-        if(set[i] == c)
-            return (1);
-        i++;
-    }
-    return (0);
-}
-char    *ft_strtrim(char const *s1, char const *set)
+static int	is_set(char c, char *set)
 {
-    char    *p;
-    size_t i;
-    size_t j;
-    char *set_new = (char *)set;
-    char *s1_new = (char *)s1;
+	size_t	i;
 
-    i = 0;
-    while (s1_new[i] && is_set(s1_new[i],set_new))
-        i++;
-        
-    j = ft_strlen(s1_new) - 1;
-    while (s1_new[j] && is_set(s1_new[j],set_new))
-        j--;
-    p = ft_substr(s1,i,j - i + 1);  
-    if(!p)
-        return (NULL);
-    return (p);      
+	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
 }
-int main ()
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    char *j = "+--hicham+-";
-    char *k = "+-+hm";
-    char *x = ft_strtrim(j,k);
-    printf("%s",x);
+	char	*p;
+	size_t	i;
+	size_t	j;
+	char	*set_new;
+	char	*s1_new;
+
+	i = 0;
+	set_new = (char *)set;
+	s1_new = (char *)s1;
+	if (!s1 || !set)
+		return (NULL);
+	while (s1_new[i] && is_set(s1_new[i], set_new))
+		i++;
+	if (s1_new[i] == 0)
+		return (ft_calloc(1, sizeof(char)));
+	j = ft_strlen(s1_new) - 1;
+	while ((s1_new[j] && is_set(s1_new[j], set_new)))
+		j--;
+	p = ft_substr(s1, i, j - i + 1);
+	if (!p)
+		return (NULL);
+	return (p);
 }
+/*int	main(void)
+{
+	char	*j;
+	char	*k;
+	char	*x;
+
+	j = "abcdef";
+	k = "abcdef";
+	x = ft_strtrim(j, k);
+	printf("<<%s>>", x);
+}
+*/

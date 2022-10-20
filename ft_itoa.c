@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 09:54:31 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/13 17:53:35 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/19 18:08:37 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,65 +15,83 @@
 #include <stdlib.h>
 #include <string.h>
 
-size_t	calc_digit(size_t num)
+static int	calcul_digit(int n)
 {
-	size_t	i;
+	int		i;
+	long	num;
 
+	num = (long)n;
 	i = 0;
+	if (num == 0)
+		i++;
 	if (num < 0)
-		num *= -1;
-	while (num > 0)
+		i++;
+	while (num != 0)
 	{
-		num = num / 10;
+		num /= 10;
 		i++;
 	}
 	return (i);
 }
 
-char	*ft_itoa(int n)
+static char	*fun(int n, char *ptr, int j, long l)
+{
+	while (n != 0)
+	{
+		ptr[j] = n % 10 + '0';
+		n /= 10;
+		j--;
+	}
+	ptr[calcul_digit(l)] = 0;
+	return (ptr);
+}
+
+static char	*replace(char *ptr)
+{
+	ptr[0] = '0';
+	ptr[1] = 0;
+	return (ptr);
+}
+
+char	*ft_itoa(int l)
 {
 	char	*ptr;
-	size_t	nbr_digit;
 	int		j;
-	int		k;
+	long	n;
 
-	if (n > 0)
+	n = (long)l;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	ptr = malloc(calcul_digit(n) + 1);
+	if (!ptr)
+		return (NULL);
+	if (n == 0)
+		return (replace(ptr));
+	if (n < 0)
 	{
-		nbr_digit = calc_digit(n);
-		ptr = (char *)malloc(nbr_digit + 1);
-		while (nbr_digit > 0)
-		{
-			j = (n % 10);
-			ptr[nbr_digit - 1] = j + '0';
-			n = (n / 10);
-			nbr_digit--;
-		}
-	}	
-	else
-	{
-		n *= (-1);
-		nbr_digit = calc_digit(n) + 1;
-		ptr = (char *)malloc(nbr_digit + 2);
 		ptr[0] = '-';
-		while (nbr_digit > 1)
-		{
-			j = (n % 10);
-			ptr[nbr_digit - 1] = j + '0';
-			n = (n / 10);
-			nbr_digit--;
-		}
+		n *= -1;
 	}
-	if (ptr)
-	{
-		k = calc_digit(n);
-		ptr[k - 1] = 0;
-		return (ptr);
-	}
-	return (NULL);
+	if (l > 0)
+		j = calcul_digit(n) - 1;
+	else
+		j = calcul_digit(n);
+	ptr = fun(n, ptr, j, l);
+	return (ptr);
 }
-int main(void)
+
+/*int	main(void)
 {
-    char    *k = ft_itoa(-1234567891);
-    
-    printf("%s", k);
-}
+	char	*k;
+
+	k = ft_itoa(0);
+	printf("\n%s\n", k);
+	//printf("\n%d\n", calcul_digit(-154));
+}*/
+
+/*while (n != 0)
+	{
+		ptr[j] = n % 10 + '0';
+		n /= 10;
+		j--;
+	}*/

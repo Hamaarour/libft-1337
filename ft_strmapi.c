@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 09:47:14 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/15 12:44:43 by hamaarou         ###   ########.fr       */
+/*   Created: 2022/10/18 10:53:42 by hamaarou          #+#    #+#             */
+/*   Updated: 2022/10/20 18:20:42 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t			i;
-	unsigned char	*k;
+	char	*p;
+	size_t	len;
+	size_t	i;
 
-	k = (unsigned char *)s;
 	i = 0;
-	while (i < n)
+	len = ft_strlen(s);
+	if (s == NULL)
+		return (NULL);
+	p = (char *)malloc(sizeof(char) * (len + 1));
+	if (p == 0)
+		return (NULL);
+	while (s[i])
 	{
-		if (k[i] == (unsigned char)c)
-			return (&k[i]);
+		p[i] = (f)(i, s[i]);
 		i++;
 	}
-	return (0);
+	p[i] = '\0';
+	return (p);
 }
-/*int main () {
-    const char str[] = "abc";
-    printf("%p\n", &str[2]);
-    const char ch = 0;
-    char *ret;
-
-    ret = ft_memchr(str, ch, 4);
-
-    printf("String after :%c \nresult : |%p|\n", ch, --ret);
-
-    return(0);
-}*/

@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 20:41:32 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/17 17:57:52 by hamaarou         ###   ########.fr       */
+/*   Created: 2022/10/15 13:56:41 by hamaarou          #+#    #+#             */
+/*   Updated: 2022/10/17 17:55:55 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t			i;
-	unsigned char	*j;
-
-	j = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		j[i] = 0;
-		i++;
-	}
-	s = j;
+	write(fd, &c, 1);
 }
-/*int main ()
-{
-    char    s[] = "hicham";
-    char    j[] = "amaarour";
-
-    ft_bzero(j,3);
-    printf("%c",j[3]);
-}*/

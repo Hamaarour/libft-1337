@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 09:47:14 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/15 12:44:43 by hamaarou         ###   ########.fr       */
+/*   Created: 2022/10/15 20:03:21 by hamaarou          #+#    #+#             */
+/*   Updated: 2022/10/18 11:50:44 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t			i;
-	unsigned char	*k;
-
-	k = (unsigned char *)s;
-	i = 0;
-	while (i < n)
+	if (n == -2147483648)
 	{
-		if (k[i] == (unsigned char)c)
-			return (&k[i]);
-		i++;
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	return (0);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = n * -1;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(n + 48, fd);
 }
-/*int main () {
-    const char str[] = "abc";
-    printf("%p\n", &str[2]);
-    const char ch = 0;
-    char *ret;
-
-    ret = ft_memchr(str, ch, 4);
-
-    printf("String after :%c \nresult : |%p|\n", ch, --ret);
-
-    return(0);
-}*/
+/*int	main(void)
+{
+	ft_putnbr_fd(15154, 1);
+}
+*/
