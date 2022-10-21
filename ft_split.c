@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 17:27:03 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/20 13:33:15 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/21 18:16:14 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,10 @@ char	**ft_split(char const *s, char sep)
 
 	i = 0;
 	j = 0;
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	p = (char **)malloc((count_word(s, sep) + 1) * sizeof(char *));
-	if (!p)
+	if (p == NULL)
 		return (NULL);
 	while (s[i])
 	{

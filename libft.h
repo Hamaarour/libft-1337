@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 20:26:04 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/18 10:50:59 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/21 17:42:09 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n);
 size_t	ft_strlen(const char *str);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memset(void *k, int c, size_t len);
 char	*ft_strchr(char *str, int j);

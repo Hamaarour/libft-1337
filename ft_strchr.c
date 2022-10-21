@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 18:43:02 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/14 16:31:30 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/21 12:04:22 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(char *str, int j)
 	i = 0;
 	c = (char)j;
 	len = ft_strlen(str);
-	if (j == '\0')
+	if (c == '\0')
 		return (&str[len]);
 	while (i < len)
 	{
@@ -42,7 +42,7 @@ char	*ft_strchr(char *str, int j)
 	printf("%c",*s);
 
 	Standard C Library Functions
-	
+
 	char *k="hicham";
 	char *t;
 
