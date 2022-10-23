@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 10:17:17 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/20 14:22:18 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:12:41 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	b[i] = 0;
 	return (b);
 }
-/*int main ()
-{
-    char s[] = "hello i'am student in 1337 Bengurir";
-    char *k = ft_substr(s,17,13);
-    printf("%s",k);
-}*/

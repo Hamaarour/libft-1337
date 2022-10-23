@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 17:27:03 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/23 13:02:17 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:11:09 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,22 +76,3 @@ char	**ft_split(char const *s, char sep)
 	p[j] = 0;
 	return (p);
 }
-
-/*int	main(void)
-{
-	char	*s;
-	char	sep;
-	int		i;
-	char	**t;
-
-	s = "student in 1337 Bengurir";
-	sep = ' ';
-	i = 0;
-	t = ft_split((void *)0, ' ');
-	while (t[i])
-	{
-		printf("%s\n", t[i]);
-		i++;
-	}
-}
-*/

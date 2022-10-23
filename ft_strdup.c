@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 11:13:57 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/17 17:55:28 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:12:13 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,3 @@ char	*ft_strdup(const char *s1)
 	p[i] = '\0';
 	return (p);
 }
-/*int main ()
-{
-    char *st = "hicham";
-    char *mine = strdup(st);
-    char *theire = ft_strdup(st);
-    printf("%s\n%s\n",mine,theire);
-    printf("%zu\n%zu",ft_strlen(mine),ft_strlen(theire));
-
-}*/

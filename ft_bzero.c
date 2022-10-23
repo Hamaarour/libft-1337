@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 20:41:32 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/17 17:57:52 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:11:22 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,3 @@ void	ft_bzero(void *s, size_t n)
 	}
 	s = j;
 }
-/*int main ()
-{
-    char    s[] = "hicham";
-    char    j[] = "amaarour";
-
-    ft_bzero(j,3);
-    printf("%c",j[3]);
-}*/

@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 11:16:14 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/14 14:43:23 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:11:50 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*int main()
-{
-    int s[] = {1,2,3,4,5};
-    int j[] = {1,2,3,7,5};
-
-    *char s[] = "hicham@gmail.com";
-    char j[] = "@";*
-    int k;
-    k = ft_memcmp(s,j,20);    
-    printf("%d", k);
-
-}*/

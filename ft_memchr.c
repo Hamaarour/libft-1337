@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 09:47:14 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/15 12:44:43 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:11:46 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-/*int main () {
-    const char str[] = "abc";
-    printf("%p\n", &str[2]);
-    const char ch = 0;
-    char *ret;
-
-    ret = ft_memchr(str, ch, 4);
-
-    printf("String after :%c \nresult : |%p|\n", ch, --ret);
-
-    return(0);
-}*/

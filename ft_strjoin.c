@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:31:03 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/18 09:55:13 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:12:18 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	p[j] = 0;
 	return (p);
 }
-/*int main ()
-{
-    char s[] = "a";
-    char j[] = "";
-
-    printf("%s",ft_strjoin(s,j));
-}*/

@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 15:23:06 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/21 13:43:20 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:12:20 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,3 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	dest[len_dest + i] = '\0';
 	return (len_dest + len_src);
 }
-/*int main ()
-{
-    char d[]= "hicham_";
-    char s[] = "amaarour";
-    int k = strlcat(d,s,8);
-    printf("%d",k);
-
-}*/

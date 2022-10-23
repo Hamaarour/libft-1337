@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 09:54:31 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/19 18:08:37 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:11:38 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,19 +79,3 @@ char	*ft_itoa(int l)
 	ptr = fun(n, ptr, j, l);
 	return (ptr);
 }
-
-/*int	main(void)
-{
-	char	*k;
-
-	k = ft_itoa(0);
-	printf("\n%s\n", k);
-	//printf("\n%d\n", calcul_digit(-154));
-}*/
-
-/*while (n != 0)
-	{
-		ptr[j] = n % 10 + '0';
-		n /= 10;
-		j--;
-	}*/

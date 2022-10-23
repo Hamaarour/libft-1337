@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:55:37 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/17 15:46:59 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:11:14 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,3 @@ int	ft_atoi(const char *str)
 		return (0);
 	return (res * n);
 }
-/*int main ()
-{
-    printf("%d", ft_atoi("15"));
-    printf("\n");
-    printf("%d", atoi("15"));
-}*/

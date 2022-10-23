@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:03:21 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/18 11:50:44 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:12:04 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,3 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + 48, fd);
 }
-/*int	main(void)
-{
-	ft_putnbr_fd(15154, 1);
-}
-*/

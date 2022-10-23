@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 14:35:12 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/21 17:42:18 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:11:56 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*int	main(void)
-{
-	char	k[];
-	char	f[];
-
-	k[] = "hello";
-	f[] = "hello";
-	//
-	ft_memmove(k + 1, k, 3);
-	memmove(f + 1, f, 3);
-	printf("mine       :>>%s \nbuilt in   :>>%s", k, f);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 21:23:11 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/17 17:55:58 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:11:59 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,3 @@ void	*ft_memset(void *k, int c, size_t len)
 	}
 	return (new);
 }
-/*int main()
-{
-    printf("%s","\n---------------------------\n");
-    //char a[] = {"Hello JournalDev"};
-    int a[6] = {1,2,3,4,5,6};
-    //printf("a = %d\n", a[0]);
-    printf("%s","---------------------------\n");
-
-	//printf("Filling the first 5 characters a with 'H' using memset\n");
-    ft_memset(a, 5, 3);
-    printf("%s","---------------------------\n");
-    printf("original memset, a = %d\n", a[0]);
-  	printf("%s","---------------------------\n");
-    printf("%s","---------------------------\n");
-
-    ft_memset(a, 'H', 3);
-    printf("my memset, a = %s\n", a);
-    printf("%s","---------------------------\n");
-	return (0);
-
-}*/

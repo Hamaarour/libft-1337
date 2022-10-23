@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 17:48:02 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/17 16:02:38 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:12:34 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-/*int main ()
-{
-	const char *largestring = "Foo Bar Baz";//0
-	const char *smallstring = "Bar"; //0
-	char	*ptr;
-
-	ptr = ft_strnstr(largestring, smallstring, 7);
-	printf("%s",ptr);
-}*/

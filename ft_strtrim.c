@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:45:56 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/19 09:50:03 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:12:39 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,15 +58,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	return (p);
 }
-/*int	main(void)
-{
-	char	*j;
-	char	*k;
-	char	*x;
-
-	j = "abcdef";
-	k = "abcdef";
-	x = ft_strtrim(j, k);
-	printf("<<%s>>", x);
-}
-*/

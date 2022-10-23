@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 14:13:02 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/22 09:42:40 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:11:24 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,3 @@ void	*ft_calloc(size_t count, size_t size)
 		((char *)p)[i++] = 0;
 	return (p);
 }
-/*int main() {
-    int *m = malloc(sizeof(int));
-    int *c = calloc(2,sizeof(int));
-    printf("the malloc adresse :%d \t and the valeur : %d",m, *m);
-    printf("\nthe malloc adresse :%p \t and the valeur : %d",c, *c);
-    printf("\n next : %p",c);
-    printf("\n next : %p",*c);
-    return (0);
-}*/

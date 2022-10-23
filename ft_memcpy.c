@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 17:44:31 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/21 16:15:50 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:11:52 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-/*int	main(void)
-{
-	char	s[];
-	char	j[];
-	char	s[];
-	char	j[];
-
-	s[] = "hicham amaarour";
-	j[] = "hicham amaarour";
-	ft_memcpy(s, s + 8, 4);
-	printf("%s", s);
-	memcpy(j, j + 8, 4);
-	printf("%s", j);
-}
-*/

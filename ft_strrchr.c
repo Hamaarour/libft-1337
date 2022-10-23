@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:29:32 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/17 17:54:31 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:12:37 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,3 @@ char	*ft_strrchr(char *s, int c)
 	}
 	return (0);
 }
-/*int main ()
-{
-	char	*c;
-
-	c = "wwww.hicham.com";
-	char *p ;
-	p = strrchr(c,'i');
-	printf("%s",p);
-	printf("\n");
-	printf("%s",p);
-}
-*/

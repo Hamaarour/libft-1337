@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:21:26 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/14 14:32:56 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:11:30 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-/*int main()
-{
-    printf("%d",ft_isascii(130));
-    printf("\n");
-    printf("%d",isascii(130));
-}*/
