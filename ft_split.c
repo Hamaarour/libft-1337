@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 17:27:03 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/21 18:16:14 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/23 13:02:17 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static size_t	count_word(char const *s, char sep)
 
 	i = 0;
 	count = 0;
-	if (s[0] != sep)
+	if (s[i] != sep && s[i])
 	{
 		i++;
 		count++;
@@ -27,12 +27,8 @@ static size_t	count_word(char const *s, char sep)
 	while (s[i])
 	{
 		if (s[i] != sep && s[i - 1] == sep)
-		{
 			count++;
-			i++;
-		}
-		else
-			i++;
+		i++;
 	}
 	return (count);
 }

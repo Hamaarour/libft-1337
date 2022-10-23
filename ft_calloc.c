@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 14:13:02 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/17 17:58:14 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/22 09:42:40 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	while (i < count * size)
 		((char *)p)[i++] = 0;
-	return ((void *)p);
+	return (p);
 }
 /*int main() {
     int *m = malloc(sizeof(int));
