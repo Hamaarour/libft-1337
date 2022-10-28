@@ -6,15 +6,15 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 20:26:04 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/23 13:59:33 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/27 21:52:55 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdio.h>
+
 # include <stdlib.h>
-# include <string.h>
+# include <unistd.h>
 
 int		ft_isalpha(int alpha);
 int		ft_atoi(const char *str);

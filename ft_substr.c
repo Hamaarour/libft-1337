@@ -6,17 +6,12 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 10:17:17 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/23 14:12:41 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/27 22:22:57 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-s:      The string from which to create the substring.
-start:  The start index of the substring in the string ’s’.
-len:    The maximum length of the substring.
-*/
-// line 31 --> just len that can be copied from s
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*b;

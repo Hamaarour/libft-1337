@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 09:54:31 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/23 14:11:38 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/26 13:43:47 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static char	*fun(int n, char *ptr, int j, long l)
 	return (ptr);
 }
 
-static char	*replace(char *ptr)
+static char	*alloc_zero(char *ptr)
 {
 	ptr[0] = '0';
 	ptr[1] = 0;
@@ -57,16 +57,16 @@ char	*ft_itoa(int l)
 {
 	char	*ptr;
 	int		j;
-	long	n;
+	int		n;
 
-	n = (long)l;
+	n = l;
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	ptr = malloc(calcul_digit(n) + 1);
 	if (!ptr)
 		return (NULL);
 	if (n == 0)
-		return (replace(ptr));
+		return (alloc_zero(ptr));
 	if (n < 0)
 	{
 		ptr[0] = '-';

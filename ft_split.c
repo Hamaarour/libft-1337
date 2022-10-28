@@ -6,7 +6,7 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 17:27:03 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/23 14:11:09 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/26 17:11:55 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t	count_word(char const *s, char sep)
 	return (count);
 }
 
-static void	free_space(char **p, char const *s, char sep)
+static int	free_space(char **p, char const *s, char sep)
 {
 	size_t	i;
 
@@ -43,6 +43,24 @@ static void	free_space(char **p, char const *s, char sep)
 		free(p[i]);
 		i++;
 	}
+	return (1);
+}
+
+static	char	**aloc(char const *s, char sep)
+{
+	char	**k;
+
+	k = (char **)ft_calloc((count_word(s, sep) + 1), sizeof(char *));
+	if (!k)
+		return (NULL);
+	return (k);
+}
+
+static int	ww(char const *s, char sep, int i)
+{
+	while (s[i] && s[i] != sep)
+		i++;
+	return (i);
 }
 
 char	**ft_split(char const *s, char sep)
@@ -56,23 +74,20 @@ char	**ft_split(char const *s, char sep)
 	j = 0;
 	if (!s)
 		return (NULL);
-	p = (char **)malloc((count_word(s, sep) + 1) * sizeof(char *));
-	if (p == NULL)
+	p = aloc(s, sep);
+	if (!p)
 		return (NULL);
 	while (s[i])
 	{
 		if (s[i] != sep)
 		{
 			start = i;
-			while (s[i] && s[i] != sep)
-				i++;
+			i = ww(s, sep, i);
 			p[j++] = ft_substr(s, start, (i - start));
-			if (!p)
-				free_space(p, s, sep);
+			(!p) && (free_space(p, s, sep));
 		}
 		else
 			i++;
 	}
-	p[j] = 0;
 	return (p);
 }

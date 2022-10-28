@@ -6,17 +6,12 @@
 /*   By: hamaarou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:53:42 by hamaarou          #+#    #+#             */
-/*   Updated: 2022/10/23 14:12:28 by hamaarou         ###   ########.fr       */
+/*   Updated: 2022/10/26 19:29:53 by hamaarou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*char  toapr(unsigned int i, char str)
-{
-	i =  0;
-	str = 'a';
-	return (str);
-}*/
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*p;
@@ -24,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	len = ft_strlen(s);
 	p = (char *)malloc(sizeof(char) * (len + 1));
