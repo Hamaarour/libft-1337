@@ -33,12 +33,12 @@ static size_t	count_word(char const *s, char sep)
 	return (count);
 }
 
-static int	free_space(char **p, char const *s, char sep)
+static int	free_space(char **p)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < count_word(s, sep))
+	while (p[i])
 	{
 		free(p[i]);
 		i++;
