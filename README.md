@@ -11,4 +11,4 @@ Libft (42cursus) 2021-2022
 
 This is my libft project from the 42 cursus,
 need help:
-hamaarou@student.42.fr
+hamaarou@student.1337.ma
