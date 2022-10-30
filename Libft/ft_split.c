@@ -84,7 +84,7 @@ char	**ft_split(char const *s, char sep)
 			start = i;
 			i = ww(s, sep, i);
 			p[j++] = ft_substr(s, start, (i - start));
-			(!p) && (free_space(p, s, sep));
+			(!p) && (free_space(p));
 		}
 		else
 			i++;
