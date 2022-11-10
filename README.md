@@ -13,7 +13,7 @@ This is my libft project from the 42 cursus,
 need help:
 hamaarou@student.1337.ma
 
-Understanding size_t
+Understanding size_t <br>
 The type size_t represents the maximum size any object can be in C. It is an unsigned
 integer since negative numbers do not make sense in this context. Its purpose is to
 provide a portable means of declaring a size consistent with the addressable area of
