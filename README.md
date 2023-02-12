@@ -1,4 +1,4 @@
-
+![Cover](https://github.com/Hamaarour/libft-1337/blob/main/libft_cover.png)
 # libft
 Libft (42cursus) 2021-2022
 
